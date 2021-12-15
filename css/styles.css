@@ -27,6 +27,34 @@ h1, h2 {
   font-family: monospace;
 }
 
+.my__skill {
+    font-style: italic;
+    font-family: cursive;
+    display: revert;
+    color: white;
+}
+
+p {
+    font-style: italic;
+    font-family: auto;
+    text-align: justify;
+    display: flex;
+    font-size: unset;
+}
+
+
+.footer__text{
+  font-style: initial;
+  font-family: monospace;
+  display: contents;
+  font-size: large;
+}
+
+.my__name {
+  display: flex;
+  font-family: math
+}
+
 #email, #tel {
   height: var(--form-input-height);
   width: var(--form-input-width);
@@ -140,12 +168,15 @@ button:hover, button:focus, .button:hover,
   width: var(--profile-width-margin);
   margin-right: var(--form-input-height);
   border-radius: 50%;
+  border: solid;
+  border-color: antiquewhite;
 }
 
 .main__profile {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
-  margin-bottom: var(--profile-width-margin);
+  margin-bottom: 200px;
+  margin-top: 150px;
 }
 
 .page__header {

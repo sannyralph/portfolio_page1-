@@ -1,0 +1,310 @@
+:root {
+  --background-color: #bac1c3;
+  --form-background-color: #ffface;
+  --links-color: #357b70;
+  --visited-links: #05676e;
+  --active-links: #489c79;
+  --header-background-color: #a0b5c1;
+  --button-border-bottom: solid rgba(0, 0, 0, 0.3);
+  --form-input-width: 500px;
+  --form-input-height: 30px;
+  --profile-width-margin: 300px;
+  --padding-gap: 10px;
+  --margin-border: 15px;
+  --button-hover: black;
+}
+
+body {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+h1, h2 {
+  font-style: italic;
+  font-family: monospace;
+}
+
+#email, #tel {
+  height: var(--form-input-height);
+  width: var(--form-input-width);
+  background-color: var(--form-background-color);
+}
+
+
+a {
+  color: var(--links-color);
+}
+
+a:visited {
+  /* visited link */
+  color: var(--visited-links);
+}
+
+a:hover, a:focus {
+  /* No underlinging when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: var(--active-links);
+}
+
+.button, button{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--links-color);
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: var(--padding-gap);
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px var(--button-border-bottom);
+  transition: 0.9s opacity;
+}
+
+button:hover, button:focus, .button:hover,
+.button:focus  {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+
+/* Change the color of button when hovering over it */
+  color: var(--button-hover);
+}
+/*
+.button__secondary {
+  background-color: #e0b354;
+  color: White;
+}
+*/
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+.navigation-list__item:hover {
+  cursor: pointer;
+  color: gray;
+  opacity: 0.8;
+}
+
+.sand__message--button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--links-color);
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: var(--padding-gap);
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid var(--button-border-bottom);
+  width: var(--form-input-width);
+
+}
+
+.sand__message--button:hover, .sand__message--button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.9;
+
+/* Change the color of button when hovering over it */
+  color: var(--button-hover);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.profile__footter {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile__portrait {
+  float: left;
+  width: var(--profile-width-margin);
+  margin-right: var(--form-input-height);
+  border-radius: 50%;
+}
+
+.main__profile {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: var(--profile-width-margin);
+}
+
+.page__header {
+  display: flex;
+  width: 100%;
+  height: 130px;
+  background-color: var(--header-background-color);
+  border-bottom: groove;
+  margin: inherit;
+  padding-right: auto;
+}
+
+.page__header-item {
+  flex: 0 1 200px;
+  border-right: double;
+  border-style: ridge;
+}
+
+.navigation-list {
+  padding-right: 20px
+}
+
+.page__header-item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.about__header {
+  border: var(--margin-border);
+}
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: var(--margin-border);
+}
+
+/* start grid fallback */
+.customer-service__item {
+ display: inline-block;
+ width: 33%;
+}
+
+/* end grid fallback */
+
+@supports (display: grid) {
+  .customer-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--padding-gap);
+    margin: 0;
+  }
+
+  .customer-service__item {
+    background-color: pink;
+    width: auto;
+    border: outset;
+    border-color: cornsilk;
+    padding: 20px;
+    text-align: justify;
+  }
+
+.page__form{
+  border: outset;
+  border-color: cornsilk;
+  padding: var(--form-input-height);
+}
+
+.textarea {
+  width: var(--form-input-width);
+  height: 170px;
+  background-color: var(--form-background-color);
+}
+
+  .customer-service__item:last-child{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+}
+
+@media all and (max-width: 500px) {
+  .customer-service {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px)  {
+  .customer-service {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .customer-service {
+    grid-gap: 10px
+  }
+  .customer-service__item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+
+@keyframes color-change {
+  /* the sun transition from 0% to 100% with 5 diffrent colors */
+  0% {
+    fill: #edc655;
+  }
+  25% {
+    fill: #fcffad;
+  }
+  50% {
+    fill: #f76414;
+  }
+  75% {
+    fill: #c0e8ff;
+
+  }
+  100% {
+    fill: #05676e;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+.sun {
+
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 9s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 15s cloud-move-reverse infinite alternate linear;
+}

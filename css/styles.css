@@ -1,11 +1,13 @@
 :root {
-  --background-color: #bac1c3;
+  --background-color: #434652;
   --form-background-color: #ffface;
-  --links-color: #357b70;
+  --links-color: #7788ef;
   --visited-links: #05676e;
   --active-links: #489c79;
-  --header-background-color: #a0b5c1;
+  --header-background-color: #141409;
   --button-border-bottom: solid rgba(0, 0, 0, 0.3);
+  --logo-border-color: #a3840c;
+  --header4-color: #e5d4da;
   --form-input-width: 500px;
   --form-input-height: 30px;
   --profile-width-margin: 300px;
@@ -49,6 +51,7 @@ p {
   display: contents;
   font-size: large;
 }
+
 
 .my__name {
   display: flex;
@@ -242,9 +245,11 @@ button:hover, button:focus, .button:hover,
   }
 
 .page__form{
+  width: 570px;
   border: outset;
   border-color: cornsilk;
   padding: var(--form-input-height);
+  margin-bottom: 50px;
 }
 
 .textarea {
@@ -338,4 +343,37 @@ button:hover, button:focus, .button:hover,
 
 .cloud-back {
   animation: 15s cloud-move-reverse infinite alternate linear;
+}
+
+.about__header{
+  font-style: italic;
+  font-family: monospace;
+}
+
+.about__logos {
+  display: grid;
+  margin-bottom: 50px;
+}
+
+
+.logo__items {
+  width: auto;
+  border: outset;
+  border-color: var(--logo-border-color);
+  padding: 20px;
+  text-align: center;
+  margin: 5px;
+}
+
+
+h4 {
+  color: var(--header4-color);
+  font-size: larger;
+  font-family: cursive;
+}
+
+@media all and (min-width: 500px){
+ .about__logos {
+   grid-template-columns: 1fr 1fr 1fr;
+ }
 }

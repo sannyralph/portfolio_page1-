@@ -1,0 +1,2 @@
+git rm --cached .DS_store
+git commit -m "remove .DS_store"

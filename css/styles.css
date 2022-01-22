@@ -16,6 +16,42 @@
   --button-hover: black;
 }
 
+.contactme_body {
+  margin: 0;
+}
+
+.contactme {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr  1fr 100px;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.contactme div {
+  padding: 10px;
+  border-bottom: double;
+}
+
+.contactme__header {
+  padding: 10px;
+  border-bottom: double;
+}
+
+header {
+  display: display;
+  padding: 20px;
+}
+
+li {
+  text-decoration: none;
+}
+
 body {
   font-family: 'lato', sans-serif;
   font-weight: 400;
@@ -263,6 +299,12 @@ button:focus,
     width: 570px;
     border: outset;
     border-color: cornsilk;
+    padding: var(--form-input-height);
+    margin-bottom: 50px;
+  }
+
+  .Contact {
+    border: outset;
     padding: var(--form-input-height);
     margin-bottom: 50px;
   }
